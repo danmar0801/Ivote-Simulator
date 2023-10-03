@@ -1,11 +1,11 @@
 public class MultiChoiceQuestion implements Question{
     private String questionText;
-    private String[] questionsANswers;
+    private String[] questionsAnswers;
 
 
     public MultiChoiceQuestion(String questionText, String[] questionsAnswers){
         this.questionText = questionText;
-        this.questionsANswers = questionsAnswers;
+        this.questionsAnswers = questionsAnswers;
 
     }
     public String getQuestionText() {
@@ -13,7 +13,7 @@ public class MultiChoiceQuestion implements Question{
     }
 
     public String[] getCandidateAnswers() {
-        return questionsANswers;
+        return questionsAnswers;
     }
 
     public boolean isMultipleChoice() {

@@ -1,16 +1,22 @@
 public class SingleChoiceQuestion implements Question{
-    @Override
+    private String questionText;
+    private String[] questionAnswers;
+
+    public SingleChoiceQuestion(String questionText, String[] questionsAnswers){
+        this.questionText = questionText;
+        this.questionAnswers = questionsAnswers;
+
+    }
     public String getQuestionText() {
-        return null;
+        return questionText;
     }
 
-    @Override
     public String[] getCandidateAnswers() {
-        return new String[0];
+        return questionAnswers;
     }
 
-    @Override
     public boolean isMultipleChoice() {
         return false;
     }
+
 }
