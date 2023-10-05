@@ -7,4 +7,6 @@ public interface iVotingService {
 
     String[] returnAnswerBank();
     Integer returnAnswerBankLength();
+    String genSingleChoiceAnswer();
+    List<String> genMultiChoiceAnswer();
 }
