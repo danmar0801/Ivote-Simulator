@@ -7,9 +7,8 @@ public class SimulationDriver {
 
     public static void main(String[] args) {
         // make question
-        Question question = new MultiChoiceQuestion("Question #1: ",
-                new String[]{"A","B","C","D"});
-        //Question question = new SingleChoiceQuestion("questions Text", new String[]{"1. True","2.False"});
+        //Question question = new MultiChoiceQuestion("Question #1: ", new String[]{"A","B","C","D"});
+        Question question = new SingleChoiceQuestion("questions Text", new String[]{"1. True","2.False"});
 
         // configure the votingService to the question
         VotingService ivote = new VotingService(question);
