@@ -52,6 +52,7 @@ public class VotingService implements iVotingService{
     }
 
     public Integer returnAnswerBankLength() {
-        return null;
+        Integer length = question.getCandidateAnswers().length;
+        return length;
     }
 }

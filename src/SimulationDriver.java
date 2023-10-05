@@ -12,11 +12,7 @@ public class SimulationDriver {
         Question singleQuestion = new SingleChoiceQuestion("questions Text",
                 new String[]{"1. True","2.False"});
 
-        // these values are need to generate the random answers for the students
-        // the answer bank, this will help us to pick the answer to submit
-        String[] answerBank = question.getCandidateAnswers();
-        // the answer bank length, this will allow us to set the upper limit of random numbers to gen
-        Integer answerBankLength = answerBank.length;
+
 
 
         // configure the votingService to the question
@@ -31,9 +27,9 @@ public class SimulationDriver {
             List<String> answers = new ArrayList<>();
             // pick a random number between 0 and the upper limit of the answer back, if the question has two answers it would be 1, if it has 4 answers it will be 3
             Random rand = new Random();
-            int num = rand.nextInt(answerBankLength);
+            int num = rand.nextInt(ivote.returnAnswerBankLength());
             // pick the answer from the bank that matches with the with number
-            String answer = answerBank[num];
+            String answer = ivote.returnAnswerBank()[num];
             answers.add(answer);
 
             // submit their answer
